@@ -2,47 +2,197 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Página informativa da Família Pina.">
-  <title>Família Pina</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portal de memória, história e genealogia da Família Pina.">
+  <title>Família Pina | História e Legado</title>
   <style>
-    :root { color-scheme: light; --ink:#20252b; --muted:#606b75; --accent:#254b67; --paper:#f5f7f8; }
+    :root {
+      --ink: #202a35;
+      --muted: #66717d;
+      --paper: #f6f4ef;
+      --white: #ffffff;
+      --accent: #9b7848;
+      --line: #e4ded3;
+      --navy: #182737;
+    }
     * { box-sizing: border-box; }
-    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:var(--ink); background:var(--paper); line-height:1.6; }
-    header { background:var(--accent); color:white; padding:56px 20px; text-align:center; }
-    header h1 { margin:0 0 8px; font-size:clamp(2rem, 6vw, 3.2rem); letter-spacing:.04em; }
-    header p { margin:0; opacity:.92; }
-    main { width:min(900px, calc(100% - 32px)); margin:32px auto; }
-    section { background:white; padding:26px; margin:18px 0; border-radius:12px; box-shadow:0 3px 14px rgba(20,35,45,.06); }
-    h2 { margin-top:0; color:var(--accent); }
-    footer { text-align:center; color:var(--muted); padding:28px 16px 40px; font-size:.9rem; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+    header {
+      background: var(--navy);
+      color: var(--white);
+      padding: 22px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .brand { font-size: 1.35rem; letter-spacing: .08em; }
+    nav { display: flex; flex-wrap: wrap; gap: 18px; }
+    nav a {
+      color: #f3eee5;
+      text-decoration: none;
+      font: 0.9rem Arial, sans-serif;
+    }
+    nav a:hover { color: #d9bd91; }
+    .hero {
+      min-height: 390px;
+      padding: 90px 7%;
+      background: linear-gradient(120deg, #182737, #34495b);
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+    .hero-inner { max-width: 820px; }
+    .eyebrow {
+      color: #d9bd91;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      font: 0.76rem Arial, sans-serif;
+    }
+    h1 { font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1.05; margin: 16px 0; font-weight: normal; }
+    .hero p { max-width: 650px; color: #e4e8ec; font-size: 1.15rem; }
+    main { max-width: 1100px; margin: auto; padding: 28px 7% 80px; }
+    section { padding: 55px 0; border-bottom: 1px solid var(--line); }
+    h2 { font-size: 2rem; font-weight: normal; margin: 0 0 18px; }
+    h3 { font-size: 1.25rem; font-weight: normal; margin: 0 0 8px; }
+    p { margin: 0 0 14px; }
+    .intro { color: var(--muted); max-width: 780px; font-size: 1.08rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 18px; margin-top: 25px; }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      padding: 24px;
+      border-radius: 5px;
+    }
+    .card p { color: var(--muted); margin-bottom: 0; }
+    .label {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font: .72rem Arial, sans-serif;
+      margin-bottom: 9px;
+    }
+    .note {
+      background: #eee8dc;
+      border-left: 3px solid var(--accent);
+      padding: 17px 20px;
+      color: #4e514f;
+      font: .92rem/1.6 Arial, sans-serif;
+      margin-top: 18px;
+    }
+    .amount { font-size: clamp(2rem, 5vw, 3.2rem); color: var(--navy); margin: 10px 0; }
+    .muted { color: var(--muted); }
+    footer {
+      background: var(--navy);
+      color: #dce2e7;
+      padding: 30px 7%;
+      text-align: center;
+      font: .85rem Arial, sans-serif;
+    }
+    @media (max-width: 600px) {
+      header { align-items: flex-start; }
+      nav { gap: 12px; }
+      .hero { min-height: 330px; padding-top: 65px; padding-bottom: 65px; }
+      main { padding-left: 6%; padding-right: 6%; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Família Pina</h1>
-    <p>Memória, identidade e história familiar</p>
+    <div class="brand">FAMÍLIA PINA</div>
+    <nav aria-label="Navegação principal">
+      <a href="#historia">História</a>
+      <a href="#familia">Família</a>
+      <a href="#origens">Origens</a>
+      <a href="#patrimonio">Património</a>
+      <a href="#arquivo">Arquivo</a>
+    </nav>
   </header>
+
+  <div class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Memória · Identidade · Legado</div>
+      <h1>Família Pina</h1>
+      <p>Um espaço dedicado à preservação da história familiar, das suas origens, do percurso das gerações e da memória que permanece ao longo do tempo.</p>
+    </div>
+  </div>
+
   <main>
-    <section>
-      <h2>Bem-vindo</h2>
-      <p>Este é o espaço informativo da Família Pina. A página será desenvolvida para reunir e apresentar informações familiares que tenham sido confirmadas e autorizadas para divulgação.</p>
+    <section id="historia">
+      <div class="label">01 · Memória familiar</div>
+      <h2>História da Família Pina</h2>
+      <p class="intro">A história da Família Pina está ligada a diferentes territórios e influências culturais, com referências familiares a Angola, Cabo Verde e Itália. Este espaço reúne essa memória e organiza, de forma progressiva, os dados históricos e genealógicos partilhados pela família.</p>
+      <p>O objetivo é preservar os acontecimentos, os percursos e os documentos relevantes para as gerações presentes e futuras. As informações que ainda não estejam acompanhadas de documentação serão identificadas como relatos ou dados fornecidos pela família, sem serem apresentadas como factos oficialmente comprovados.</p>
     </section>
-    <section>
-      <h2>A nossa história</h2>
-      <p>Esta secção será preenchida com a história da Família Pina, incluindo datas, lugares e acontecimentos relevantes, depois de as informações serem verificadas.</p>
+
+    <section id="familia">
+      <div class="label">02 · Identidade e privacidade</div>
+      <h2>Membros da família</h2>
+      <div class="card">
+        <div class="label">Pai</div>
+        <h3>António Correia Pina</h3>
+        <p>É o único membro da família identificado publicamente pelo nome completo neste portal.</p>
+        <p class="muted">A informação familiar fornecida para este projeto refere um percurso ligado à atividade parlamentar e a relações institucionais entre Angola e Cabo Verde. Os cargos, as funções e respetivas datas deverão ser acompanhados de fontes documentais antes de serem apresentados como informação oficial.</p>
+      </div>
+      <div class="note">Por respeito à privacidade, os restantes membros da família não são identificados pelo nome. Não são publicados os seus nomes, fotografias, biografias individuais ou outros dados pessoais.</div>
     </section>
-    <section>
-      <h2>Arquivo e documentos</h2>
-      <p>Esta área poderá reunir referências a documentos, fotografias e outros registos cuja publicação tenha sido autorizada pelos respetivos titulares.</p>
+
+    <section id="origens">
+      <div class="label">03 · Raízes e ligações</div>
+      <h2>Origens e percurso</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Angola</h3>
+          <p>Uma das principais referências da história e da identidade familiar.</p>
+        </div>
+        <div class="card">
+          <h3>Cabo Verde</h3>
+          <p>Parte do percurso e das ligações históricas indicadas pela família.</p>
+        </div>
+        <div class="card">
+          <h3>Itália</h3>
+          <p>Referência às raízes italianas mencionadas na história familiar, ainda sujeitas à confirmação por registos genealógicos.</p>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:18px">As referências a ascendência, origem familiar e nacionalidade são conceitos diferentes. A existência de antepassados de determinado país não comprova, por si só, a nacionalidade dos seus descendentes.</p>
     </section>
-    <section>
-      <h2>Contacto</h2>
-      <p>Para sugerir uma correção ou contribuir com informação, contacte os responsáveis pelo site através de um canal de contacto oficial que será indicado aqui.</p>
+
+    <section id="patrimonio">
+      <div class="label">04 · Informação patrimonial</div>
+      <h2>Património da Família</h2>
+      <div class="card">
+        <p class="muted">Estimativa indicada pelo utilizador para este projeto</p>
+        <div class="amount">397 milhões USD</div>
+        <p>Este valor foi comunicado como estimativa do património familiar. Não foi apresentada, para esta página, uma avaliação independente ou documentação financeira que permita confirmá-lo.</p>
+      </div>
+      <div class="note">Por transparência, o montante é apresentado como estimativa comunicada pela família, e não como valor oficialmente auditado ou verificado. Não são divulgados detalhes de contas, ativos, endereços ou outros dados financeiros privados.</div>
+    </section>
+
+    <section id="arquivo">
+      <div class="label">05 · Registos e documentação</div>
+      <h2>Arquivo histórico</h2>
+      <p class="intro">Esta secção destina-se a reunir documentos, registos genealógicos, publicações e outros materiais que ajudem a confirmar e preservar a história da Família Pina.</p>
+      <p class="muted">Os documentos serão acrescentados quando estiverem disponíveis e autorizados para divulgação pública. A ausência de um documento nesta página não significa que o acontecimento ou a ligação familiar não exista; significa apenas que ainda não foi publicado aqui um registo de suporte.</p>
+    </section>
+
+    <section id="legado">
+      <div class="label">06 · Continuidade</div>
+      <h2>Legado e memória</h2>
+      <p>Preservar a memória familiar é valorizar as raízes, reconhecer os percursos das gerações e transmitir às gerações futuras uma história organizada, responsável e respeitadora da privacidade de cada pessoa.</p>
     </section>
   </main>
+
   <footer>
-    <p>Família Pina · Página informativa</p>
+    <p>Família Pina · Portal de história e memória familiar</p>
+    <p>Conteúdo sujeito a atualização e à confirmação documental das informações históricas.</p>
   </footer>
 </body>
 </html>
